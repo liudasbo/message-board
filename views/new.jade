@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+  form(method="POST" action="/new") 
+    label(for="userName") Name: 
+    input(type="text" id="userName" name="userName" required)
+    &nbsp;
+
+    label(for="messageText") Message: 
+    input(type="text" id="messageText" name="messageText" required)
+    &nbsp;
+
+    input(type="submit" value="Submit")
+
+  a(href="/") Back to the Message Board
